@@ -1,0 +1,132 @@
+@media (max-width: 950px) {
+	.header{
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+		color: #000;
+		width: 100%;
+		min-height: 100vh;
+	}
+	.header-div{
+		width: 100%;
+	}
+	.header-div:nth-child(1){
+		margin-bottom: 3rem;
+	}
+	.header-div:nth-child(2){
+		text-align: center;
+	}
+	.header-img{
+		width: 400px;
+		max-width: 100%;
+	}
+
+	.icon{
+		display: none;
+	}
+
+	.text{
+		width: 70%;
+		margin-left: 5%;
+	}
+
+	/* SECCION 2 */
+
+	.sec2{
+		display: grid;
+		grid-template-columns: [cambiar-start] 1fr [cambiar-end];
+		grid-template-rows: 1fr [cambiar-start] 1fr [cambiar-end] 1fr 1fr;
+	}
+	.sec2-div:nth-child(1){
+		grid-area: cambiar;
+	}
+	.sec2-div:nth-child(1n){
+		width: 100%;
+	}
+	.sec2-div:nth-child(3n+1){
+		text-align: center;
+	}
+
+	.footer{
+		justify-content: center;
+		background: radial-gradient(circle,#111 220px,#333);
+	}
+	.footer-img{
+		display: none;
+	}
+}
+
+@media (max-width: 530px) {
+	.btn-menu{
+		display: block;
+		width: 28px;
+		height: 28px;
+		cursor: pointer;
+		margin-right: 10%;
+		position: relative;
+	}
+	.barra{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 28px;
+		height: 3px;
+		background: #888;
+		border-radius: 3px;
+		transition: .3s ease;
+	}
+	.barra1{
+		transform: translate(-50%, -7px);
+	}
+	.barra2{
+		transform: translate(-50%, 0);
+	}
+	.barra3{
+		transform: translate(-50%, 7px);
+	}
+	.close .barra1{
+		transform: translate(-50%, 0) rotateZ(225deg);
+		/*transform: translate(-50%, 0) rotateZ(45deg);*/
+	}
+	.close .barra2{
+		opacity: 0;
+		transform: translate(-150%, 0);
+		pointer-events: none;
+	}
+	.close .barra3{
+		transform: translate(-50%, 0) rotateZ(-225deg);
+		/*transform: translate(-50%, 0) rotateZ(-45deg);*/
+	}
+	.nav-ul{
+		position: absolute;
+		top: 2.5rem;
+		right: 0;
+		display: block;
+		width: 240px;
+		max-width: 80%;
+		background: #111;
+		height: 100vh;
+		margin: 0;
+		z-index: 1;
+		transform: translateX(240px);
+		transition: .3s ease;
+	}
+	.nav-ul-open{
+		transform: translateX(0);
+	}
+	.nav-ul li{
+		margin-left: 0;
+	}
+	.nav-ul li .active, .nav-ul li a:hover{
+		color: #fff;
+	}
+	.nav-ul li a{
+		color: #999;
+		display: block;
+		width: 100%;
+		margin-left: 0;
+		padding: 10px;
+		border-top: 1px solid #999;
+	}
+}
